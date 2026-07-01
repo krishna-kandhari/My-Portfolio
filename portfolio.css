@@ -25,7 +25,7 @@ nav {
     padding: 10px 80px;
     flex-wrap: wrap;
     min-height: 60px;
-    gap: 15px; /* Added fallback gap for wrapping */
+    gap: 15px; 
 }
 
 nav ul {
@@ -66,7 +66,7 @@ nav ul li a {
 
 .contact {
     background: linear-gradient(135deg, #5B8DEF, #7C4DFF);
-    padding: 5px 12px; /* Slight horizontal padding improvement */
+    padding: 5px 12px; 
     border-radius: 5px;
     border: 1px solid;
     text-decoration: none;
@@ -74,7 +74,7 @@ nav ul li a {
     text-transform: uppercase;
     font-size: 12px;
     color: #ffffff;
-    display: inline-block; /* Essential to allow layout sizing */
+    display: inline-block; 
 }
 
 hr {
@@ -111,7 +111,7 @@ hr {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    gap: 20px; /* Slight increase for clean spacing */
+    gap: 20px; 
     align-items: center;
     min-height: 350px;
     margin: 60px 0;
@@ -123,7 +123,7 @@ hr {
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #00e5ff;
-    flex-shrink: 0; /* Prevents image distortion on crunchier screens */
+    flex-shrink: 0; 
 }
 
 .left-section {
@@ -138,7 +138,7 @@ hr {
 
 .left-section h2 {
     font-size: 35px;
-    line-height: 2.2rem; /* Soft tweak to let larger text breathe */
+    line-height: 2.2rem; 
     max-width: 450px;
     width: 100%;
 }
@@ -174,7 +174,7 @@ hr {
 }
 
 .academic-container {
-    min-height: 100px; /* Switched max-height to min-height to ensure text won't overflow */
+    min-height: 100px; 
     max-width: 500px;
     width: 100%;
     background-color: rgba(255, 255, 255, .05);
@@ -233,8 +233,6 @@ hr {
 }
 
 .abt-pmain {
-    text-transform: uppercase;
-    text-align: justify;
     font-size: 15px;
 }
 
@@ -259,21 +257,20 @@ iframe {
 .exp-mb {
     min-height: 150px;
     background-color: rgba(255, 255, 255, .05);
-    padding: 15px; /* Boosted padding slightly to breathe better */
+    padding: 20px; 
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, .08);
     display: flex;
     align-items: flex-start;
     margin-bottom: 30px;
-    flex-wrap: wrap; /* Allows dates to seamlessly push below on tightly packed frames */
-    gap: 10px;
+    gap: 15px;
 }
 
 .exp-ins-img img {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    margin: 5px;
+    object-fit: cover;
     flex-shrink: 0;
 }
 
@@ -281,30 +278,36 @@ iframe {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    flex: 1; /* Maximizes text allocation dynamically */
-    min-width: 200px; /* Safe wrapping trigger threshold */
-    margin: 5px;
+    flex: 1; 
+    gap: 4px;
 }
 
 .exp-left {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    margin: 5px;
-    margin-left: auto; /* Aligns left panel nicely elements */
+    white-space: nowrap; /* Prevents date from splitting onto two lines */
 }
 
 .type {
     color: #00E5FF;
+    font-weight: 600;
 }
 
 .main1-exp {
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: justify;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    line-height: 1.4;
 }
 
 .exp-ins {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.exp-d {
+    font-size: 0.9rem;
+    opacity: 0.7;
 }
 
 /* --- SKILLS SECTION --- */
@@ -328,7 +331,7 @@ iframe {
 .skill-blocks {
     display: flex;
     align-items: center;
-    gap: 15px; /* Slight gap optimization */
+    gap: 15px; 
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
@@ -365,7 +368,7 @@ iframe {
 
 .s-tags {
     background-color: rgba(0, 229, 255, .1);
-    padding: 3px 8px; /* Slightly easier reading edges */
+    padding: 3px 8px; 
     font-size: small;
     border-radius: 23px;
     border: 1px solid #00E5FF;
@@ -382,7 +385,6 @@ iframe {
 
 .projects-card {
     display: grid;
-    /* Fixed syntax bug: auto-fit with correct minmax logic */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 15px;
 }
@@ -402,7 +404,7 @@ iframe {
     text-transform: uppercase;
     font-size: 13px;
     color: #00E5FF;
-    line-height: 20px; /* Reduced to match padding perfectly */
+    line-height: 20px; 
     display: inline-block;
     margin-bottom: 10px;
 }
@@ -426,7 +428,7 @@ iframe {
     font-size: 10px;
     color: #00E5FF;
     text-decoration: none;
-    display: inline-block; /* Crucial for internal anchor scaling rules */
+    display: inline-block;
 }
 
 
@@ -446,15 +448,15 @@ iframe {
 @media (max-width: 768px) {
     nav {
         padding: 15px 20px;
-        justify-content: center; /* Center links for cleanly wrapped headers */
+        justify-content: center; 
     }
     
     .container {
-        width: 90vw; /* Gives layout more room side-to-side on small screens */
+        width: 90vw; 
     }
 
     .front {
-        flex-direction: column-reverse; /* Stacks image nicely right above or below headers */
+        flex-direction: column-reverse; 
         text-align: center;
         margin: 30px 0;
         min-height: auto;
@@ -486,6 +488,23 @@ iframe {
         width: 100%;
         max-width: 100%;
         height: 500px;
+        display: none;
+    }
+    .box{
+        font-size: 12px;
+    }
+
+    .exp-mb {
+        flex-direction: column; /* Stack layout seamlessly on tablets/phones */
+        gap: 12px;
+    }
+
+    .exp-ins-img {
+        margin-bottom: 5px;
+    }
+
+    .exp-left {
+        align-self: flex-start; /* Keeps the date aligned left when stacked below */
     }
 }
 
