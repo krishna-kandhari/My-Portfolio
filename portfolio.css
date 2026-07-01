@@ -1,0 +1,461 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background:
+        radial-gradient(circle at top left, #5B8DEF22 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #7C4DFF22 0%, transparent 35%),
+        linear-gradient(135deg, #081229, #111c44, #0E2A66);
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(17, 28, 68, .8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    padding: 10px 80px;
+    flex-wrap: wrap;
+    min-height: 60px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+nav ul li {
+    list-style: none;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.txt-clr {
+    color: #00E5FF;
+
+}
+
+#element {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #ffc857;
+
+
+}
+
+.contact {
+    background: linear-gradient(135deg, #5B8DEF, #7C4DFF);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+hr {
+    height: 2px;
+    border: none;
+    background: linear-gradient(90deg,
+            transparent,
+            #00E5FF,
+            #FFC857,
+            transparent);
+}
+
+.top-tags {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.headings {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+/* main section */
+
+.container {
+    width: 80vw;
+    margin: 0px auto;
+    min-height: fit-content;
+}
+
+.front {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    min-height: 350px;
+    margin: 60px 0;
+}
+
+.front img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #00e5ff;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    min-height: 280px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.left-section h2 {
+    font-size: 35px;
+    line-height: 2rem;
+    max-width: 450px;
+}
+
+.left-section p {
+    font-size: 20px;
+    max-width: 450px;
+    line-height: 1.6rem;
+
+}
+
+.right-section {
+    display: flex;
+    width: 40%;
+    min-height: 280px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.hero-logo {
+    display: flex;
+    gap: 10px;
+}
+
+.hero-logos a {
+    color: #00E5FF;
+}
+
+/* academic section  */
+
+.academic-bg {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.academic-container {
+    min-height: 130px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, .05);
+    border: 2px solid rgba(255, 255, 255, .08);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+.academic-container img {
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+}
+
+#all-ac {
+    display: flex;
+    flex-direction: column;
+}
+
+.ach {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.acp {
+    font-size: 0.7rem;
+    text-transform: capitalize;
+}
+
+.acd {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.acr {
+    font-size: 15px;
+}
+
+/* about section  */
+
+.about-me {
+    display: flex;
+    gap: 100px;
+    min-height: 600px;
+
+}
+
+.abt {
+    display: block;
+    width: 50%;
+    margin-top: 30px;
+
+
+}
+
+.abt-pmain {
+    text-transform: uppercase;
+    text-align: justify;
+    font-size: 15px;
+
+}
+
+.resume {
+    margin-top: 30px;
+    width: 50%;
+}
+
+iframe {
+    height: 550px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #00E5FF;
+}
+
+@media (max-width:768px) {
+
+    .about-me {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        min-height: auto;
+    }
+
+    .abt,
+    .resume {
+        width: 100%;
+    }
+
+    .abt-pmain {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 500px;
+    }
+
+}
+
+/* experience section */
+
+.experience {
+    margin-top: 30px;
+}
+
+.exp-mb {
+    min-height: 150px;
+    background-color: rgba(255, 255, 255, .05);
+    padding: 3px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, .08);
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+
+
+}
+
+.exp-ins-img img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 5px;
+
+}
+
+.exp-t {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 80%;
+    margin: 5px;
+}
+
+.exp-left {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 5px;
+}
+.type{
+    color: #00E5FF;
+}
+.main1-exp{
+    text-transform: uppercase;
+    text-align: justify;
+}
+
+/* skills section */
+
+.skills {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.skill-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.skill-blocks {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.skill-b {
+
+    display: flex;
+    height: 120px;
+    width: 260px;
+    background-color: rgba(255, 255, 255, .05);
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.sbh {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    text-transform: uppercase;
+
+}
+
+.exp-ins{
+    font-size: 0.7rem;
+}
+
+.stags {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 3px;
+    margin-top: 10px;
+
+}
+
+.s-tags {
+    background-color: rgba(0, 229, 255, .1);
+    padding: 3px;
+    font-size: small;
+    border-radius: 23px;
+    border: 1px solid #00E5FF;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #00E5FF;
+
+}
+
+/* projects section */
+.projects-bg {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.projects-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(autofit, minmax (2, 220px));
+    gap: 5px;
+}
+
+.box {
+    background-color: rgba(255, 255, 255, .05);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, .08);
+    
+}
+.p-title{
+    background-color: rgba(0, 229, 255, .1);
+padding: 5px;
+border-radius: 25px;
+border: 1px solid #00E5FF;
+text-transform: uppercase;
+font-size: 15px;
+color: #00E5FF;
+line-height: 40px;
+}
+.p-subtitle{
+    color: rgba(0, 229, 255, 0.631);
+}
+.p-technologies{
+    color: rgba(0, 229, 255, 0.631);
+}
+.p-link{
+    background-color: rgba(0, 229, 255, .1);
+    padding: 3px;
+    font-size: small;
+    border-radius: 23px;
+    border: 1px solid #00E5FF;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #00E5FF;
+    text-decoration: none;
+}
