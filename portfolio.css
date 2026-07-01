@@ -11,9 +11,9 @@ body {
         radial-gradient(circle at top left, #5B8DEF22 0%, transparent 35%),
         radial-gradient(circle at bottom right, #7C4DFF22 0%, transparent 35%),
         linear-gradient(135deg, #081229, #111c44, #0E2A66);
-
 }
 
+/* --- NAVIGATION --- */
 nav {
     display: flex;
     justify-content: space-between;
@@ -25,6 +25,7 @@ nav {
     padding: 10px 80px;
     flex-wrap: wrap;
     min-height: 60px;
+    gap: 15px; /* Added fallback gap for wrapping */
 }
 
 nav ul {
@@ -36,7 +37,6 @@ nav ul {
 
 nav ul li {
     list-style: none;
-
 }
 
 nav ul li a {
@@ -55,7 +55,6 @@ nav ul li a {
 
 .txt-clr {
     color: #00E5FF;
-
 }
 
 #element {
@@ -63,13 +62,11 @@ nav ul li a {
     font-size: 1.5rem;
     text-transform: uppercase;
     color: #ffc857;
-
-
 }
 
 .contact {
     background: linear-gradient(135deg, #5B8DEF, #7C4DFF);
-    padding: 5px;
+    padding: 5px 12px; /* Slight horizontal padding improvement */
     border-radius: 5px;
     border: 1px solid;
     text-decoration: none;
@@ -77,6 +74,7 @@ nav ul li a {
     text-transform: uppercase;
     font-size: 12px;
     color: #ffffff;
+    display: inline-block; /* Essential to allow layout sizing */
 }
 
 hr {
@@ -101,19 +99,19 @@ hr {
     font-size: 25px;
 }
 
-/* main section */
-
+/* --- MAIN CONTAINER --- */
 .container {
     width: 80vw;
     margin: 0px auto;
     min-height: fit-content;
 }
 
+/* --- HERO SECTION --- */
 .front {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    gap: 10px;
+    gap: 20px; /* Slight increase for clean spacing */
     align-items: center;
     min-height: 350px;
     margin: 60px 0;
@@ -125,6 +123,7 @@ hr {
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #00e5ff;
+    flex-shrink: 0; /* Prevents image distortion on crunchier screens */
 }
 
 .left-section {
@@ -135,20 +134,20 @@ hr {
     min-height: 280px;
     text-align: center;
     justify-content: center;
-
 }
 
 .left-section h2 {
     font-size: 35px;
-    line-height: 2rem;
+    line-height: 2.2rem; /* Soft tweak to let larger text breathe */
     max-width: 450px;
+    width: 100%;
 }
 
 .left-section p {
     font-size: 20px;
     max-width: 450px;
+    width: 100%;
     line-height: 1.6rem;
-
 }
 
 .right-section {
@@ -157,8 +156,6 @@ hr {
     min-height: 280px;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .hero-logo {
@@ -170,16 +167,16 @@ hr {
     color: #00E5FF;
 }
 
-/* academic section  */
-
+/* --- ACADEMIC SECTION --- */
 .academic-bg {
     margin-bottom: 30px;
     margin-top: 30px;
 }
 
 .academic-container {
-    max-height: 300px;
+    min-height: 100px; /* Switched max-height to min-height to ensure text won't overflow */
     max-width: 500px;
+    width: 100%;
     background-color: rgba(255, 255, 255, .05);
     border: 2px solid rgba(255, 255, 255, .08);
     border-radius: 10px;
@@ -188,7 +185,6 @@ hr {
     align-items: center;
     gap: 10px;
     padding: 10px;
-
 }
 
 .academic-container img {
@@ -196,7 +192,7 @@ hr {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-
+    flex-shrink: 0;
 }
 
 #all-ac {
@@ -223,28 +219,23 @@ hr {
     font-size: 15px;
 }
 
-/* about section  */
-
+/* --- ABOUT SECTION --- */
 .about-me {
     display: flex;
     gap: 100px;
     min-height: 600px;
-
 }
 
 .abt {
     display: block;
     width: 50%;
     margin-top: 30px;
-
-
 }
 
 .abt-pmain {
     text-transform: uppercase;
     text-align: justify;
     font-size: 15px;
-
 }
 
 .resume {
@@ -260,7 +251,219 @@ iframe {
     border: 2px solid #00E5FF;
 }
 
-@media (max-width:768px) {
+/* --- EXPERIENCE SECTION --- */
+.experience {
+    margin-top: 30px;
+}
+
+.exp-mb {
+    min-height: 150px;
+    background-color: rgba(255, 255, 255, .05);
+    padding: 15px; /* Boosted padding slightly to breathe better */
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, .08);
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allows dates to seamlessly push below on tightly packed frames */
+    gap: 10px;
+}
+
+.exp-ins-img img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 5px;
+    flex-shrink: 0;
+}
+
+.exp-t {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 1; /* Maximizes text allocation dynamically */
+    min-width: 200px; /* Safe wrapping trigger threshold */
+    margin: 5px;
+}
+
+.exp-left {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 5px;
+    margin-left: auto; /* Aligns left panel nicely elements */
+}
+
+.type {
+    color: #00E5FF;
+}
+
+.main1-exp {
+    text-transform: uppercase;
+    text-align: justify;
+}
+
+.exp-ins {
+    font-size: 0.7rem;
+}
+
+/* --- SKILLS SECTION --- */
+.skills {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.skill-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.skill-blocks {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Slight gap optimization */
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.skill-b {
+    display: flex;
+    height: 120px;
+    width: 260px;
+    background-color: rgba(255, 255, 255, .05);
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sbh {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.stags {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 3px;
+    margin-top: 10px;
+}
+
+.s-tags {
+    background-color: rgba(0, 229, 255, .1);
+    padding: 3px 8px; /* Slightly easier reading edges */
+    font-size: small;
+    border-radius: 23px;
+    border: 1px solid #00E5FF;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #00E5FF;
+}
+
+/* --- PROJECTS SECTION --- */
+.projects-bg {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.projects-card {
+    display: grid;
+    /* Fixed syntax bug: auto-fit with correct minmax logic */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 15px;
+}
+
+.box {
+    background-color: rgba(255, 255, 255, .05);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, .08);
+}
+
+.p-title {
+    background-color: rgba(0, 229, 255, .1);
+    padding: 5px 12px;
+    border-radius: 10px;
+    border: 1px solid #00E5FF;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #00E5FF;
+    line-height: 20px; /* Reduced to match padding perfectly */
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.p-subtitle {
+    color: rgba(0, 229, 255, 0.631);
+    margin-bottom: 8px;
+}
+
+.p-technologies {
+    color: rgba(0, 229, 255, 0.631);
+    margin-bottom: 12px;
+}
+
+.p-link {
+    background-color: rgba(0, 229, 255, .1);
+    padding: 5px 10px;
+    border-radius: 23px;
+    border: 1px solid #00E5FF;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #00E5FF;
+    text-decoration: none;
+    display: inline-block; /* Crucial for internal anchor scaling rules */
+}
+
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablets / Medium Screens (992px and below) */
+@media (max-width: 992px) {
+    nav {
+        padding: 15px 40px;
+    }
+    .about-me {
+        gap: 40px;
+    }
+}
+
+/* Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+        justify-content: center; /* Center links for cleanly wrapped headers */
+    }
+    
+    .container {
+        width: 90vw; /* Gives layout more room side-to-side on small screens */
+    }
+
+    .front {
+        flex-direction: column-reverse; /* Stacks image nicely right above or below headers */
+        text-align: center;
+        margin: 30px 0;
+        min-height: auto;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        min-height: auto;
+    }
 
     .about-me {
         flex-direction: column;
@@ -284,179 +487,19 @@ iframe {
         max-width: 100%;
         height: 500px;
     }
-
 }
 
-/* experience section */
-
-.experience {
-    margin-top: 30px;
+/* Super Small Screen Adjustments (480px and below) */
+@media (max-width: 480px) {
+    .left-section h2 {
+        font-size: 28px;
+    }
+    .left-section p {
+        font-size: 16px;
+    }
+    .exp-left {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
 }
-
-.exp-mb {
-    min-height: 150px;
-    background-color: rgba(255, 255, 255, .05);
-    padding: 3px;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, .08);
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
-
-
-}
-
-.exp-ins-img img {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    margin: 5px;
-
-}
-
-.exp-t {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 80%;
-    margin: 5px;
-}
-
-.exp-left {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    margin: 5px;
-}
-.type{
-    color: #00E5FF;
-}
-.main1-exp{
-    text-transform: uppercase;
-    text-align: justify;
-}
-
-/* skills section */
-
-.skills {
-    margin-top: 30px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 30px;
-}
-
-.skill-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.skill-blocks {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.skill-b {
-
-    display: flex;
-    height: 120px;
-    width: 260px;
-    background-color: rgba(255, 255, 255, .05);
-    padding: 10px;
-    border: 2px solid rgba(255, 255, 255, .08);
-    border-radius: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-
-}
-
-.sbh {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    text-transform: uppercase;
-
-}
-
-.exp-ins{
-    font-size: 0.7rem;
-}
-
-.stags {
-    flex-wrap: wrap;
-    display: flex;
-    gap: 10px;
-    justify-content: flex-start;
-    padding: 3px;
-    margin-top: 10px;
-
-}
-
-.s-tags {
-    background-color: rgba(0, 229, 255, .1);
-    padding: 3px;
-    font-size: small;
-    border-radius: 23px;
-    border: 1px solid #00E5FF;
-    text-transform: uppercase;
-    font-size: 10px;
-    color: #00E5FF;
-
-}
-
-/* projects section */
-.projects-bg {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.projects-card {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(autofit, minmax (2, 220px));
-    gap: 5px;
-}
-
-.box {
-    background-color: rgba(255, 255, 255, .05);
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, .08);
-    
-}
-.p-title{
-    background-color: rgba(0, 229, 255, .1);
-padding: 5px;
-border-radius: 25px;
-border: 1px solid #00E5FF;
-text-transform: uppercase;
-font-size: 15px;
-color: #00E5FF;
-line-height: 40px;
-}
-.p-subtitle{
-    color: rgba(0, 229, 255, 0.631);
-}
-.p-technologies{
-    color: rgba(0, 229, 255, 0.631);
-}
-.p-link{
-    background-color: rgba(0, 229, 255, .1);
-    padding: 3px;
-    font-size: small;
-    border-radius: 23px;
-    border: 1px solid #00E5FF;
-    text-transform: uppercase;
-    font-size: 10px;
-    color: #00E5FF;
-    text-decoration: none;
-}
-
