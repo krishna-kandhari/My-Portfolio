@@ -221,33 +221,34 @@ hr {
 
 /* --- ABOUT SECTION --- */
 .about-me {
-    display: flex;
+    display: grid;
     gap: 100px;
-    min-height: 600px;
+    min-height: fit-content;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
-.abt {
-    display: block;
-    width: 50%;
-    margin-top: 30px;
+
+.resume-logo{
+    background: rgba(0, 229, 255, .1);
+    color: #00E5FF;
+    text-decoration: none;
+    border: 1px solid #00E5FF;
+    padding: 5px;
+    border-radius: 20px;
 }
 
 .abt-pmain {
     font-size: 15px;
-}
-
-.resume {
-    margin-top: 30px;
-    width: 50%;
-}
-
-iframe {
-    height: 550px;
-    max-width: 500px;
-    width: 100%;
+    background-color: rgba(255, 255, 255, .05);
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, .08);
     border-radius: 10px;
-    border: 2px solid #00E5FF;
+    
 }
+
+
+
 
 /* --- EXPERIENCE SECTION --- */
 .experience {
@@ -484,13 +485,10 @@ iframe {
         text-align: justify;
     }
 
-    iframe {
-        width: 100%;
-        max-width: 100%;
-        height: 500px;
-        display: none;
-    }
     .box{
+        font-size: 12px;
+    }
+    .main1-exp{
         font-size: 12px;
     }
 
