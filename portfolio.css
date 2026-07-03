@@ -25,7 +25,7 @@ nav {
     padding: 10px 80px;
     flex-wrap: wrap;
     min-height: 60px;
-    gap: 15px; 
+    gap: 15px;
 }
 
 nav ul {
@@ -66,7 +66,7 @@ nav ul li a {
 
 .contact {
     background: linear-gradient(135deg, #5B8DEF, #7C4DFF);
-    padding: 5px 12px; 
+    padding: 5px 12px;
     border-radius: 5px;
     border: 1px solid;
     text-decoration: none;
@@ -74,7 +74,7 @@ nav ul li a {
     text-transform: uppercase;
     font-size: 12px;
     color: #ffffff;
-    display: inline-block; 
+    display: inline-block;
 }
 
 hr {
@@ -111,7 +111,7 @@ hr {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    gap: 20px; 
+    gap: 20px;
     align-items: center;
     min-height: 350px;
     margin: 60px 0;
@@ -123,7 +123,7 @@ hr {
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #00e5ff;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .left-section {
@@ -138,7 +138,7 @@ hr {
 
 .left-section h2 {
     font-size: 35px;
-    line-height: 2.2rem; 
+    line-height: 2.2rem;
     max-width: 450px;
     width: 100%;
 }
@@ -174,7 +174,7 @@ hr {
 }
 
 .academic-container {
-    min-height: 100px; 
+    min-height: 100px;
     max-width: 500px;
     width: 100%;
     background-color: rgba(255, 255, 255, .05);
@@ -229,7 +229,7 @@ hr {
 }
 
 
-.resume-logo{
+.resume-logo {
     background: rgba(0, 229, 255, .1);
     color: #00E5FF;
     text-decoration: none;
@@ -244,7 +244,7 @@ hr {
     padding: 10px;
     border: 2px solid rgba(255, 255, 255, .08);
     border-radius: 10px;
-    
+
 }
 
 
@@ -258,7 +258,7 @@ hr {
 .exp-mb {
     min-height: 150px;
     background-color: rgba(255, 255, 255, .05);
-    padding: 20px; 
+    padding: 20px;
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, .08);
     display: flex;
@@ -279,13 +279,14 @@ hr {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    flex: 1; 
+    flex: 1;
     gap: 4px;
 }
 
 .exp-left {
     display: flex;
-    white-space: nowrap; /* Prevents date from splitting onto two lines */
+    white-space: nowrap;
+    /* Prevents date from splitting onto two lines */
 }
 
 .type {
@@ -332,7 +333,7 @@ hr {
 .skill-blocks {
     display: flex;
     align-items: center;
-    gap: 15px; 
+    gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
@@ -369,7 +370,7 @@ hr {
 
 .s-tags {
     background-color: rgba(0, 229, 255, .1);
-    padding: 3px 8px; 
+    padding: 3px 8px;
     font-size: small;
     border-radius: 23px;
     border: 1px solid #00E5FF;
@@ -386,7 +387,7 @@ hr {
 
 .projects-card {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 15px;
 }
 
@@ -405,7 +406,7 @@ hr {
     text-transform: uppercase;
     font-size: 13px;
     color: #00E5FF;
-    line-height: 20px; 
+    line-height: 20px;
     display: inline-block;
     margin-bottom: 10px;
 }
@@ -440,6 +441,7 @@ hr {
     nav {
         padding: 15px 40px;
     }
+
     .about-me {
         gap: 40px;
     }
@@ -449,21 +451,22 @@ hr {
 @media (max-width: 768px) {
     nav {
         padding: 15px 20px;
-        justify-content: center; 
+        justify-content: center;
     }
-    
+
     .container {
-        width: 90vw; 
+        width: 90vw;
     }
 
     .front {
-        flex-direction: column-reverse; 
+        flex-direction: column-reverse;
         text-align: center;
         margin: 30px 0;
         min-height: auto;
     }
 
-    .left-section, .right-section {
+    .left-section,
+    .right-section {
         width: 100%;
         min-height: auto;
     }
@@ -485,15 +488,16 @@ hr {
         text-align: justify;
     }
 
-    .box{
+    .box {
         font-size: 12px;
     }
-    .main1-exp{
+
+    .main1-exp {
         font-size: 12px;
     }
 
     .exp-mb {
-        flex-direction: column; /* Stack layout seamlessly on tablets/phones */
+        flex-direction: column;
         gap: 12px;
     }
 
@@ -502,21 +506,27 @@ hr {
     }
 
     .exp-left {
-        align-self: flex-start; /* Keeps the date aligned left when stacked below */
+        align-self: flex-start;
     }
 }
 
 /* Super Small Screen Adjustments (480px and below) */
 @media (max-width: 480px) {
-    .left-section h2 {
-        font-size: 28px;
+    nav {
+        display: none;
     }
-    .left-section p {
-        font-size: 16px;
+
+        .left-section h2 {
+            font-size: 28px;
+        }
+
+        .left-section p {
+            font-size: 16px;
+        }
+
+        .exp-left {
+            margin-left: 0;
+            width: 100%;
+            justify-content: flex-start;
+        }
     }
-    .exp-left {
-        margin-left: 0;
-        width: 100%;
-        justify-content: flex-start;
-    }
-}
